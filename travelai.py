@@ -18,13 +18,11 @@ user_menu = st.sidebar.radio(
 
 if user_menu == "Page 1":
     pass
-#your page content, filters etc
 '''Your one stop AI assistant for all your travel needs!'''
 selected_year = st.sidebar.selectbox("Select Year",years) #years is list of years
 
 if user_menu == "Page 2":
     pass
-#your page content, filters etc
 
 st.divider()
 
@@ -66,25 +64,19 @@ elif button_cols_2[1].button(example_prompts[4], help=example_prompts_help[4]):
 elif button_cols_2[2].button(example_prompts[5], help=example_prompts_help[5]):
     button_pressed = example_prompts[5]
 
-# Initialize chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-# Display chat messages from history on app rerun
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-# Accept user input
 if prompt := st.chat_input("Where would you like to travel this summer?") or button_pressed:
-    # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
-    # Display user message in chat message container
     with st.chat_message("user"):
         st.markdown(prompt)
 
-    # Display assistant response in chat message container
     with st.chat_message("assistant"):
-        response = st.write(response_generator(prompt))
-    # Add assistant response to chat history
-    st.session_state.messages.append({"role": "assistant", "content": response})
+        response = response_generator(prompt)
+        st.markdown(response)
+        st.session_state.messages.append({"role": "assistant", "content": response})

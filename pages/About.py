@@ -4,14 +4,23 @@ from helper_functions import load_css
 
 st.set_page_config(layout='wide')
 load_css()
-
-st.markdown('''
-<style>
-[data-testid="stMarkdownContainer"] ul{
-    list-style-position: inside;
-}
-</style>
-''', unsafe_allow_html=True)
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background-color: #FFFFFF;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+# st.markdown('''
+# <style>
+# [data-testid="stMarkdownContainer"] ul{
+#     list-style-position: inside;
+# }
+# </style>
+# ''', unsafe_allow_html=True)
 
 IMAGE_SIZE = (128, 128)
 
