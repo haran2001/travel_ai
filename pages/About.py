@@ -14,13 +14,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-# st.markdown('''
-# <style>
-# [data-testid="stMarkdownContainer"] ul{
-#     list-style-position: inside;
-# }
-# </style>
-# ''', unsafe_allow_html=True)
 
 IMAGE_SIZE = (128, 128)
 
@@ -29,7 +22,9 @@ st.subheader("")
 st.write("At Travel.ai, we revolutionized travel planning to alleviate the common headaches encountered during trip scheduling. \
          By integrating advanced AI technology, we streamline the entire process, providing personalized itineraries, optimizing travel routes, and enhancing the overall user experience. \
          Say goodbye to the stress of planning and embrace seamless travel with Travel.ai.")
-st.header("About developers")
+
+
+st.header("About the developers")
 st.write("We're dudes who love building stuff. Feel to reach out to us through our socials and share your feedback")
 
 col1, col2 = st.columns([2,1])

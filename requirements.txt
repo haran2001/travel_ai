@@ -25,3 +25,6 @@ openpyxl
 
 streamlit==1.24.0
 streamlit-extras
+
+praw
+youtube-transcript-api
